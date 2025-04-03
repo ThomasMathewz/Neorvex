@@ -1,0 +1,102 @@
+<div style="display: none;">
+  {% load url}
+  {% load static %}
+</div>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="{% static 'css/global1.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/Login.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap"
+    />
+  </head>
+  <body>
+    <div class="login-page">
+      <header class="navbar-22">
+        <div class="container4">
+          <div class="content15">
+            <img
+              class="company-logo-icon3"
+              loading="lazy"
+              alt=""
+              src="{% static 'images/logo.png' %}"
+            />
+          </div>
+          <nav class="column5">
+            <a class="about-us2" href="{% url 'welcome' %}">About Us</a>
+            <a class="services2" href="{% url 'welcome' %}">Services</a>
+            <a class="contact2" href="{% url 'welcome' %}">Contact</a>
+          </nav>
+        </div>
+      </header>
+      <main class="login-modal-1">
+        <div class="modal">
+          <div class="section-title4">
+            <h1 class="heading8">Log In</h1>
+            <div class="modal-description">Enter your credentials</div>
+          </div>
+          <form class="form1" method="post">
+            <div style="display: none;">
+              {% csrf_token %}
+            </div>
+            <div class="input">
+              <div class="email">Username*</div>
+              <div class="form-group">
+                <input
+                  autocomplete="off"
+                  id="username"
+                  name="username"
+                  type="text"
+                  class="form-control"
+                />
+              </div>
+            </div>
+            <div class="input1">
+              <div class="password1">Password*</div>
+              <div class="form-group">
+                <input
+                  autocomplete="off"
+                  id="password"
+                  name="password"
+                  type="text"
+                  class="form-control"
+                />
+              </div>
+            </div>
+            <div class="container5">
+              <div class="buttons">
+                <button class="button14" href="{% url 'home' %}">
+                  <div class="button15">Log In</div>
+                </button>
+                <button class="button16" href="#">
+                  <img
+                    class="icon-google"
+                    loading="lazy"
+                    alt=""
+                    src="{% static 'images/icon--google.svg' %}"
+                  />
+                  <div class="button17" type="hidden">Log In with Google</div>
+                </button>
+              </div>
+              <div class="links1">
+                <a class="link3" href="{% url 'reset' %}">Forgot your password?</a>
+                <div class="content16">
+                  <div class="action-items">
+                    Don't have an account?
+                  </div>
+                  <a class="link4" href="{% url 'signup' %}">Sign Up</a>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <img class="icon" alt="" src="{% static 'images/logo.png' %}" />
+      </main>
+    </div>
+  </body>
+</html>

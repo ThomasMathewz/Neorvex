@@ -1,0 +1,89 @@
+<div style="display: none;">
+  {% load url}
+  {% load static %}
+</div>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="{% static 'css/global1.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/SearchResultPage.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap"
+    />
+  </head>
+  <body>
+    <div class="search-result-page">
+      <header class="navbar-27">
+        <div class="container13">
+          <div class="content48">
+            <img
+              class="company-logo-icon8"
+              loading="lazy"
+              alt=""
+              src="{% static 'images/logo.png' %}"
+            />
+          </div>
+          <nav class="column14">
+            <a class="home3" href="{% url 'home' %}">Home</a>
+            <a class="wishlist3" href="{% url 'wishlist' %}">Wishlist</a>
+            <a class="logout3" href="{% url 'welcome' %}">Logout</a>
+          </nav>
+        </div>
+      </header>
+      <div class="main">
+        <div class="product-grid1">
+          <main class="product-21">
+            <section class="title1">
+              <div class="section-title8">
+                <div class="subheading1">Search Results Found...</div>
+                <div class="content49">
+                  <h1 class="heading32">Product Search</h1>
+                  <div class="title-description1">
+                    NEORVEX Product Recommendation Engine
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="content50">
+              <div class="content51">
+                {% for product in products %}
+                <div class="product21">
+                  <img
+                    class="placeholder-image-icon26"
+                    loading="lazy"
+                    alt=""
+                    src={{ product.image }}
+                  />
+
+                  <div class="content52">
+                    <div class="header20">
+                      <div class="heading33">{{ product.title }}</div>
+                    </div>
+                    <div class="price22">Rs{{ product.price }}</div>
+                  </div>
+                  <form id="wishlist" method="post" action="{% url 'search' %}">
+                    {% csrf_token %}
+                    <input type="hidden" name="PID" value="{{ product.PID }}">
+                    <button class="button85" type="submit">
+                        <div class="button86">Add from Wishlist</div>
+                    </button>
+                  </form>
+                  <a class="button85" href="{{ product.url }}" target="_blank">
+                    <div class="button86">Redirect to Flipkart</div>
+                  </a>
+                </div>
+                {% empty %}
+                <p>No products found.</p>
+                {% endfor %}
+              </div> 
+            </section>
+          </main>    
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

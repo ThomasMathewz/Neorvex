@@ -1,0 +1,73 @@
+<div style="display: none;">
+  {% load url}
+  {% load static %}
+</div>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="{% static 'css/global1.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/homepage.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap"
+    />
+  </head>
+  <body>
+    <div class="home-page">
+      <header class="navbar-2">
+        <div class="container">
+          <div class="content">
+            <img
+              class="company-logo-icon"
+              loading="lazy"
+              alt=""
+              src="{% static 'images/logo.png' %}"
+            />
+          </div>
+          <nav class="column">
+            <a class="home" href="{% url 'home' %}">Home</a>
+            <a class="wishlist" href="{% url 'wishlist' %}">Wishlist</a>
+            <a class="logout" href="{% url 'welcome' %}">Logout</a>
+        </div>
+      </header>
+      <main class="header-52">
+        <video autoplay loop muted>
+          <source src="{% static 'video/banner1.mp4' %}" type="video/mp4">
+        </video>
+        <div class="container1">
+          <div class="section-title">
+            <div class="content1">
+              <h1 class="short-heading-here-container">
+                <p class="welcome-to">Welcome to</p>
+                <p class="neorvex">NEORVEX</p>
+              </h1>
+            </div>
+            <div class="lorem-ipsum-dolor">Product Recommendation Engine</div>
+          </div>
+          <div class="actions1">
+            <div class="form">
+              <form id="search-text" method="post" action="{% url 'home' %}">
+                {% csrf_token %}
+                <input type="text" id="search_query" name="search_query" class="form-control" placeholder="Search for products" required>
+                <button class="button2" type="submit">
+                  <div class="button3">Search</div>
+                </button>
+              </form>
+            </div>
+            <div class="by-clicking-sign-container">
+              <span>
+                clicking Reset Password you're confirming that you agree with
+                our
+              </span>
+              <span class="terms-and-conditions">Terms and Conditions</span>
+              <span>.</span>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

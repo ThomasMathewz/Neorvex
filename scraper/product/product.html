@@ -1,0 +1,145 @@
+<div style="display: none;">
+  {% load url}
+  {% load static %}
+</div>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="{% static 'css/global1.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/ProductPage.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap"
+    />
+  </head>
+  <body>
+    <div class="product-page">
+      <header class="navbar-26">
+        <div class="container11">
+          <div class="content46">
+            <img
+              class="company-logo-icon7"
+              loading="lazy"
+              alt=""
+              src="{% static 'images/logo.png' %}"
+            />
+          </div>
+          <nav class="column9">
+            <a class="home2" href="{% url 'home' %}">Home</a>
+            <a class="wishlist2" href="{% url 'wishlist' %}">Wishlist</a>
+            <a class="logout2" href="{% url 'welcome' %}">Logout</a>
+          </nav>
+        </div>
+      </header>
+      <main class="product-header-8">
+        <section class="content47">
+          <div class="column10">
+            <div class="product-description4">
+              <div class="breadcrumbs">
+                <div class="link6">NEORVEX</div>
+                <img
+                  class="icon-chevron-right3"
+                  loading="lazy"
+                  alt=""
+                  src="{% static 'images/icon--chevronright.svg' %}"
+                />
+
+                <div class="link7">Product Search</div>
+                <img
+                  class="icon-chevron-right4"
+                  loading="lazy"
+                  alt=""
+                  src="{% static 'images/icon--chevronright.svg' %}"
+                />
+
+                <div class="link8">Product name</div>
+              </div>
+              <h1 class="heading31">Product name</h1>
+              <div class="price20">
+                <b class="price21">$55 </b>
+
+                <div class="product-review">
+                  <div class="text19">(3.5 stars) • 10 reviews</div>
+                </div>
+              </div>
+              <div class="tabs-menu">
+                <div class="tabs">
+                  <div class="tab">
+                    <div class="details">Details</div>
+                  </div>
+                </div>
+                <div class="text20">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Suspendisse varius enim in eros elementum tristique. Duis
+                  cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
+                  commodo diam libero vitae erat.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product20">
+            <div class="row3">
+              <img
+                class="placeholder-image-icon20"
+                loading="lazy"
+                alt=""
+                src="./public/placeholder-image1@2x.png"
+              />
+            </div>
+            <div class="row4">
+              <img
+                class="placeholder-image-icon21"
+                loading="lazy"
+                alt=""
+                src="./public/placeholder-image-1@2x.png"
+              />
+
+              <img
+                class="placeholder-image-icon22"
+                loading="lazy"
+                alt=""
+                src="./public/placeholder-image-2@2x.png"
+              />
+
+              <img
+                class="placeholder-image-icon23"
+                loading="lazy"
+                alt=""
+                src="./public/placeholder-image-3@2x.png"
+              />
+
+              <img
+                class="placeholder-image-icon24"
+                loading="lazy"
+                alt=""
+                src="./public/placeholder-image-41@2x.png"
+              />
+
+              <img
+                class="placeholder-image-icon25"
+                loading="lazy"
+                alt=""
+                src="./public/placeholder-image-5@2x.png"
+              />
+            </div>
+          </div>
+          <div class="column11">
+            <div class="container12">
+              <div class="form-submit">
+                <div class="button77">
+                  <div class="button78">Redirect to Flipkart Page</div>
+                </div>
+                <button class="button79" href="{% url 'wishlist' %}">
+                  <div class="button80">Add to Wishlist</div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

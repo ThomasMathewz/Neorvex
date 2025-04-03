@@ -1,0 +1,414 @@
+<div style="display: none;">
+  {% load url}
+  {% load static %}
+</div>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="{% static 'css/global.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap"
+    />
+  </head>
+  <body>
+    <div class="desktop-1">
+      <header class="navbar-2">
+        <div class="container">
+          <div class="content">
+            <a href="{% url 'welcome' %}">
+              <img
+                class="company-logo-icon"
+                loading="lazy"
+                alt=""
+                src="{% static 'images/logo.png' %}"
+              />
+            </a>
+          </div>
+          <div class="column">
+            <a class="about-us" href="#about">About Us</a>
+            <a class="services" href="#about">Services</a>
+            <a class="contact" href="#contact">Contact</a>
+          </div>
+          <div class="actions">
+            <a href="{% url 'login' %}">
+              <button class="button">
+                <div class="button1">Login</div>
+              </button>
+            </a>
+          </div>
+        </div>
+      </header>
+      <section class="hero">
+        <div class="header-51">
+          <div class="container1">
+            <div class="section-title">
+              <div class="tagline">Hello Consumers!</div>
+              <div class="content1">
+                <h1 class="welcome">Welcome to NEORVEX</h1>
+                <div class="description">
+                  Simplified E-commerce Recommendation Engine to power-up your
+                  experience and to recommend great quality products
+                </div>
+              </div>
+            </div>
+            <div class="actions1">
+              <a href="#about">
+                <button class="learnmore-button">
+                  <div class="learnmore">Learn More</div>
+                </button>
+              </a>
+              <a href="{% url 'signup' %}">
+                <button class="sign-up-button">
+                  <div class="signup">Sign-up</div>
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="cta-19" id="join">
+        <div class="column1">
+          <div class="content2">
+            <h1 class="join-us-text">Join our Community today!</h1>
+            <div class="description-for-join">
+              Discover amazing products and connect with like-minded shoppers.
+            </div>
+          </div>
+          <div class="actions2">
+            <a href="{% url 'signup' %}">
+              <button class="sign-up-button1">
+                <div class="sign-up">Sign Up</div>
+              </button>
+            </a>
+            <a href="{% url 'login' %}">
+              <button class="login-button">
+                <div class="login">Login</div>
+              </button>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="features" id="about">
+        <div class="layout-246">
+          <div class="section-title1">
+            <div class="column2">
+              <h1 class="heading">
+                Effortlessly filter product listings by user ratings and review
+                ratings
+              </h1>
+            </div>
+            <div class="column3">
+              <div class="text-suspendisse-varius">
+                NEORVEX utilizes web-scraping technology to gather product data
+                from Amazon and Flipkart. Our advanced sentimental analysis of
+                customer reviews allows you to make informed decisions based on
+                user ratings and reviews.
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="list-item">
+              <img
+                class="icon-relume"
+                loading="lazy"
+                alt=""
+                src="{% static 'images/icon--cartfeature.svg' %}"
+              />
+
+              <h3 class="heading1">
+                Discover the power of sentimental analysis
+              </h3>
+              <div class="feature-item-descriptions">
+                Our cutting-edge technology analyzes customer reviews to provide
+                accurate product ratings.
+              </div>
+              <div class="action">
+                <a href="#">
+                  <div class="button2">
+                    <div class="button3">Learn More</div>
+                    <img
+                      class="icon-chevron-right"
+                      loading="lazy"
+                      alt=""
+                      src="{% static 'images/icon--chevronright.svg' %}"
+                    />
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="list-item1">
+              <img
+                class="icon-relume1"
+                loading="lazy"
+                alt=""
+                src="{% static 'images/icon--cartfeature.svg' %}"
+              />
+
+              <h3 class="heading2">Efficiently search and filter products</h3>
+              <div class="text">
+                Our search bar allows you to easily find the products you are looking for.
+              </div>
+              <div class="action1">
+                <a href="#">
+                  <div class="button4">
+                    <div class="button5">Learn More</div>
+                    <img
+                      class="icon-chevron-right1"
+                      loading="lazy"
+                      alt=""
+                      src="{% static 'images/icon--chevronright.svg' %}"
+                    />
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="list-item2">
+              <img
+                class="icon-relume2"
+                loading="lazy"
+                alt=""
+                src="{% static 'images/icon--cartfeature.svg' %}"
+              />
+
+              <h3 class="heading3">Create your personalized wishlist</h3>
+              <div class="text1">
+                Save your favorite products to your wishlist and access them
+                anytime.
+              </div>
+              <div class="action2">
+                <a href="#">
+                  <div class="button6">
+                    <div class="button7">Learn More</div>
+                    <img
+                      class="icon-chevron-right2"
+                      loading="lazy"
+                      alt=""
+                      src="{% static 'images/icon--chevronright.svg' %}"
+                    />
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-14">
+          <div class="content3">
+            <img
+              class="placeholder-lightbox-icon"
+              loading="lazy"
+              alt=""
+              src="{% static 'images/assist.jpeg' %}"
+            />
+
+            <div class="content-wrapper">
+              <div class="content4">
+                <div class="stars">
+                  <img
+                    class="star-icons"
+                    loading="lazy"
+                    alt=""
+                    src="{% static 'images/vector.svg' %}"
+                  />
+
+                  <img
+                    class="star-icons1"
+                    loading="lazy"
+                    alt=""
+                    src="{% static 'images/vector.svg' %}"
+                  />
+
+                  <img
+                    class="star-icons2"
+                    loading="lazy"
+                    alt=""
+                    src="{% static 'images/vector.svg' %}"
+                  />
+
+                  <img
+                    class="star-icons3"
+                    loading="lazy"
+                    alt=""
+                    src="{% static 'images/vector.svg' %}"
+                  />
+
+                  <img
+                    class="star-icons4"
+                    loading="lazy"
+                    alt=""
+                    src="{% static 'images/vector.svg' %}"
+                  />
+                </div>
+                <h3 class="quote">
+                  NEORVEX has revolutionized the way I shop online. Their
+                  web-scraping technology and sentiment analysis of reviews
+                  helps me find the best products with ease.
+                </h3>
+                <div class="avatar">
+                  <div class="avatar-content-wrapper">
+                    <div class="avatar-content">
+                      <div class="author-name">Suresh Naidu</div>
+                      <div class="author-title">Assi. Manager, Flipkart</div>
+                    </div>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="logos-wrapper">
+                    <img
+                      class="logos-icon"
+                      loading="lazy"
+                      alt=""
+                      src="{% static 'images/logos.png' %}"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="contact-20" id="contact">
+        <div class="section-title2">
+          <div class="connect">Connect</div>
+          <div class="content5">
+            <h1 class="heading4">Get in Touch</h1>
+            <div class="contact-body">
+              Contact us for any inquiries or questions you may have.
+            </div>
+          </div>
+        </div>
+        <div class="row1">
+          <div class="content6">
+            <img
+              class="icon-envelope"
+              loading="lazy"
+              alt=""
+              src="{% static 'images/icon--envelope.svg' %}"
+            />
+
+            <div class="contact-info">
+              <div class="content7">
+                <h1 class="heading5">Email</h1>
+                <div class="info-details">
+                  We're here to help! Reach out to us today.
+                </div>
+                </div>
+              <div class="link">info@neorvex.com</div>
+            </div>
+          </div>
+          <div class="content8">
+            <img
+              class="icon-phone"
+              loading="lazy"
+              alt=""
+              src="{% static 'images/icon--phone.svg' %}"
+            />
+
+            <div class="contact-info1">
+              <div class="content9">
+                <h1 class="heading6">Phone</h1>
+                <div class="text2">Let us know how we can assist you.</div>
+              </div>
+              <div class="link1">+1 (555) 934-8357</div>
+            </div>
+          </div>
+          <div class="content10">
+            <img
+              class="icon-map"
+              loading="lazy"
+              alt=""
+              src="{% static 'images/icon--map.svg' %}"
+            />
+
+            <div class="contact-info2">
+              <div class="content11">
+                <h1 class="heading7">Office</h1>
+                <div class="text3">
+                  Don't hesitate to contact us with any concerns.
+                </div>
+              </div>
+              <div class="link2">135 Main St, New York, NY 10001</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="footer-4">
+        <div class="content12">
+          <div class="logo">
+            <img
+              class="company-logo-icon1"
+              loading="lazy"
+              alt=""
+              src="{% static 'images/logo.png' %}"
+            />
+          </div>
+          <div class="links-wrapper">
+            <div class="links">
+              <a class="link-one" href="#">Home</a>
+              <a class="link-two" href="#join">Join Us</a>
+              <a class="link-three" href="#about">About Us</a>
+              <a class="link-four" href="#about">Services</a>
+              <a class="link-five" href="#contact">Connect</a>
+            </div>
+          </div>
+          <div class="social-links-wrapper">
+            <div class="social-links">
+              <img
+                class="icon-facebook"
+                loading="lazy"
+                alt=""
+                src="{% static 'images/icon--facebook.svg' %}"
+              />
+
+              <img
+                class="icon-instagram"
+                loading="lazy"
+                alt=""
+                src="{% static 'images/icon--instagram.svg' %}"
+              />
+
+              <img
+                class="icon-x"
+                loading="lazy"
+                alt=""
+                src="{% static 'images/icon--x.svg' %}"
+              />
+
+              <img
+                class="icon-linkedin"
+                loading="lazy"
+                alt=""
+                src="{% static 'images/icon--linkedin.svg' %}"
+              />
+
+              <img
+                class="icon-youtube"
+                loading="lazy"
+                alt=""
+                src="{% static 'images/icon--youtube.svg' %}"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="credits">
+          <div class="divider1"></div>
+          <div class="row-wrapper">
+            <div class="row2">
+              <div class="relume-all-rights">
+                © 2024 Neorvex. All rights reserved.
+              </div>
+              <div class="footer-links">
+                <div class="privacy-policy">Privacy Policy</div>
+                <div class="terms-of-service">Terms of Service</div>
+                <div class="cookies-settings">Cookies Settings</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

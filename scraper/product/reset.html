@@ -1,0 +1,81 @@
+<div style="display: none;">
+  {% load url}
+  {% load static %}
+</div>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="{% static 'css/global1.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/Reset.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap"
+    />
+  </head>
+  <body>
+    <div class="reset-page">
+      <header class="navbar-21">
+        <div class="container2">
+          <div class="content13">
+            <img
+              class="company-logo-icon2"
+              loading="lazy"
+              alt=""
+              src="{% static 'images/logo.png' %}"
+            />
+          </div>
+          <nav class="column4">
+            <a class="about-us1" href="{% url 'welcome' %}">About Us</a>
+            <a class="services1" href="{% url 'welcome' %}">Services</a>
+            <a class="contact1" href="{% url 'welcome' %}">Contact</a>
+          </nav>
+          <div class="actions3">
+            <div class="button8">
+              <div class="button9">Login</div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="header-52">
+        <div class="container3">
+          <div class="section-title3">
+            <div class="tagline1">Forgot your password?</div>
+            <div class="content14">
+              <h1 class="short-heading-here-container">
+                <p class="reset">Reset</p>
+                <p class="password">Password</p>
+              </h1>
+              <div class="lorem-ipsum-dolor">
+                Enter your Email Address to reset password
+              </div>
+            </div>
+          </div>
+          <div class="actions4">
+            <div class="form">
+              <div class="text-input">
+                <input
+                  class="placeholder"
+                  placeholder="Enter your email"
+                  type="text"
+                />
+              </div>
+              <button class="button10" href="{% url 'login' %}">
+                <div class="button11">Reset Password</div>
+              </button>
+            </div>
+            <div class="by-clicking-sign-container">
+              <span>By clicking Reset Password you're confirming that you agree
+                with our
+              </span>
+              <span class="terms-and-conditions">Terms and Conditions</span>
+              <span>.</span>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
